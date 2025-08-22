@@ -101,4 +101,4 @@ You may potentially want to have the native module transpiled for the next app. 
 - Root: `apps/next`
 - Install command to be `yarn set version stable && yarn install`
 - Build command: leave default setting
-- Output dir: leave default setting
+- Output dir: leave default setting test1
