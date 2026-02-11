@@ -5,13 +5,8 @@ export default defineConfig({
     exclude: [
       '**/node_modules/**',
       '**/dist/**',
-      '**/e2e/**',
+      '**/e2e/**', // Exclude Playwright e2e tests
       '**/.next/**',
     ],
-    poolOptions: {
-      threads: {
-        singleThread: true,
-      },
-    },
   },
 })

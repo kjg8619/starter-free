@@ -1,4 +1,4 @@
-import { defaultConfig } from '@tamagui/config/v4'
+import { defaultConfig } from '@tamagui/config/v5'
 import { createTamagui } from 'tamagui'
 import { bodyFont, headingFont } from './fonts'
 import { animations } from './animations'
@@ -10,8 +10,14 @@ export const config = createTamagui({
     body: bodyFont,
     heading: headingFont,
   },
-  settings:{
+  settings: {
     ...defaultConfig.settings,
-    onlyAllowShorthands: false
-  }
+    onlyAllowShorthands: false,
+  },
 })
+
+export type Conf = typeof config
+
+declare module 'tamagui' {
+  interface TamaguiCustomConfig extends Conf {}
+}
